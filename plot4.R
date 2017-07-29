@@ -10,7 +10,7 @@ plot4 <- function() {
   par(mfrow=c(2,2))
   
   ## create the plots
-  with(c, {
+  with(power, {
     plot(global_active_power ~ as.POSIXct(time), type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
 
     plot(voltage ~ as.POSIXct(time), type = "l", xlab = "", ylab = "Voltage")
@@ -18,7 +18,7 @@ plot4 <- function() {
     plot(sub_metering_1 ~ as.POSIXct(time), type = "l", xlab = "", ylab = "Energy sub metering", col = "black")
     lines(sub_metering_2 ~ as.POSIXct(time), col = "red")
     lines(sub_metering_3 ~ as.POSIXct(time), col = "blue")
-    legend("topright", legend = names(c[7:9]), lty = 1, col = c('black', 'red', 'blue'))
+    legend("topright", legend = names(power[7:9]), lty = 1, col = c('black', 'red', 'blue'))
     
     plot(global_reactive_power ~ as.POSIXct(time), type = "l", xlab = "", ylab = "Global Reactive Power")
     

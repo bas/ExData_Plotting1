@@ -7,7 +7,7 @@ plot2 <- function() {
   png(file = "plot2.png", width = 480, height = 480)
   
   ## create the line plot
-  with(c, plot(global_active_power ~ as.POSIXct(time), type = "l", xlab = "", ylab = "Global Active Power (kilowatts)"))
+  with(power, plot(global_active_power ~ as.POSIXct(time), type = "l", xlab = "", ylab = "Global Active Power (kilowatts)"))
 
   dev.off()
 }
